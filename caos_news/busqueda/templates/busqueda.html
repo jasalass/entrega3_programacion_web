@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+Búsqueda
+{% endblock %}
+
+{% block content %}
+
+<body class="mt-5 ">
+    <div class="container bg-dark pt-4 " style="height: 200px;">
+      <div class="row ">
+        <form class="form-busqueda d-flex flex-column ">
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Busqueda</label>
+            <input type="text" class="form-control w-100" id="exampleInputEmail1" aria-describedby="emailHelp" style="width: 500px;" placeholder="Ingrese su busqueda aquí" required>   
+          </div>
+          <button type="submit" class="btn btn-secondary w-100">Buscar</button>
+        </form>
+      </div>
+    </div> 
+</body>
+
+
+{% endblock %}

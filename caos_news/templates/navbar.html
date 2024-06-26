@@ -1,0 +1,32 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'index' %}">
+            <img src="{% static 'img/logo.jpg' %}" alt="Logo de Caos News" class="img-fluid rounded-circle" style="max-height: 50px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'contacto' %}">Contacto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'suscripcion' %}">Suscripción</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'login' %}">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'busqueda' %}">Busqueda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'contacto-laboral' %}">Trabaja con nosotros</a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>`

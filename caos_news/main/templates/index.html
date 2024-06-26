@@ -1,0 +1,125 @@
+<!-- my_app/templates/my_app/index.html -->
+{% extends "base.html" %} 
+{% load static %}
+
+{% block title %}
+Inicio
+{% endblock %}
+
+{% block content %}
+<body style="margin-bottom: 10px;">
+    <div class="container" style="max-width: 1000px; margin: auto;">
+      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+            aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+            aria-label="Slide 5"></button>
+        </div>
+        <div class="carousel-inner carousel-fade">
+          <div class="carousel-item active" data-bs-interval="2000">
+            <img src="{% static 'img/nvidia.webp' %}" class="d-block w-100 img-fluid h-100" alt="Imagen no encontrada">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>¡Gran anuncio de Nvidia!</h5>
+              <p>Nvidia revela su nueva serie de tarjetas gráficas GeForce RTX 40 con tecnología de trazado de rayos
+                mejorada y rendimiento líder en la industria.</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="{% static 'img/playstation.jpg' %}" class="d-block w-100 img-fluid h-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>¡Lanzamiento de la nueva consola PlayStation!</h5>
+              <p>La nueva consola de última generación, X-Play, llegará al mercado el próximo mes con una biblioteca de
+                juegos exclusivos.</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="{% static 'img/dark-souls.jpg' %}" class="d-block w-100 img-fluid h-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>¡Gran expansión para Dark Souls!</h5>
+              <p>Se anuncia una expansión masiva para el aclamado juego de rol Dark Souls. ¡Prepárate para enfrentar nuevos desafíos y descubrir secretos oscuros!</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="{% static 'img/rol.jpg' %}" class="d-block w-100 img-fluid h-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>¡Nuevo juego de rol en mundo abierto!</h5>
+              <p>Se anuncia un nuevo juego de rol en mundo abierto que promete una experiencia épica con gráficos
+                impresionantes y mecánicas innovadoras.</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src= "{% static 'img/esports_stand.jpg' %}" class="d-block w-100 img-fluid h-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>¡Evento exclusivo de eSports!</h5>
+              <p>Se celebrará un evento de eSports con los mejores jugadores del mundo compitiendo por el título en una
+                emocionante batalla.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  
+    <div class="container mt-4">
+      <h2 class="mb-3">Últimas Noticias</h2>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card h-100">
+            <img src="{% static 'img/xyz.jpg' %}" class="card-img-top" alt="Noticia sobre el lanzamiento de un nuevo juego">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Nuevo Juego Anunciado</h5>
+              <p class="card-text flex-grow-1">Conoce todos los detalles sobre el último juego anunciado por XYZ
+                Studios, promete revolucionar la industria.</p>
+              <a href="#" class="btn btn-dark mt-auto">Leer más</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="{% static 'img/warquest.jpg' %}" class="card-img-top" alt="Actualización de un juego popular">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Gran Actualización para WarQuest</h5>
+              <p class="card-text flex-grow-1">WarQuest recibe una actualización masiva que añade nuevos niveles,
+                personajes y más.</p>
+              <a href="#" class="btn btn-dark mt-auto">Leer más</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="{% static 'img/esports.jpg' %}" class="card-img-top" alt="Evento de eSports">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Próximos Evento de eSports</h5>
+              <p class="card-text flex-grow-1">No te pierdas los próximos torneos de eSports este mes, con equipos de
+                todo el mundo compitiendo por el grandes premios.</p>
+              <a href="#" class="btn btn-dark mt-auto">Leer más</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="container mt-4" >
+      <h2 class="mb-3">Juegos Destacados</h2>
+      <div class="row row-cols-1  g-4" id="juegos-destacados">
+        
+      </div>
+    </div>
+</body>
+{% endblock %}

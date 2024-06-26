@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+Contacto Laboral
+{% endblock %}
+
+{% block content %}
+<body class="mt-5"> 
+    <div class="container-fluid  d-flex justify-content-center align-items-center">
+      <div class="row bg-dark w-100 p-5">
+        <div>
+          <h2 class="text-white">Formulario de contacto</h2>
+          <form id="form-laboral"> 
+            <div class="mb-3">
+              <label for="nombre" class="form-label text-white">Nombre</label>
+              <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre completo" required>
+            </div>
+            <div class="mb-3 d-flex flex-column align-items-start">
+              <label for="rut" class="form-label text-white mb-2 text-start">Rut</label>
+              <div class="d-flex align-items-center">
+                  <input type="number" class="form-control me-2" id="rut" aria-describedby="emailHelp" placeholder="Ingrese rut" min="1111111" max="9999999" style="max-width: 300px;">
+                  <span class="me-2 text-white">-</span>
+                  <input type="text" class="form-control me-2" id="dv" aria-describedby="emailHelp" placeholder="dv" maxlength="1" style="width: 100px;">
+              </div>
+          </div>        
+            <div class="mb-3">
+              <label for="email" class="form-label text-white">Correo</label>
+              <input type="email" class="form-control" id="email" aria-describedby="emailHelp"  placeholder="Ingrese su correo electrónico" required>
+            </div>
+            <div class="mb-3">
+              <label for="resena" class="form-label text-white">Sobre mí (Máximo 1000 caracteres)</label>
+              <textarea class="form-control" placeholder="Breve descripción" id="resena" style="height: 200px" maxlength="1000"></textarea>
+              <p id="restante" class="text-white"></p>
+            </div>
+            <div class="mb-3">
+              <label for="curriculum" class="form-label text-white">Adjuntar Currículum (PDF)</label>
+              <input type="file" class="form-control" id="curriculum" accept=".pdf">
+            </div>
+            
+            <button type="submit" id="boton-enviar" class="btn btn-secondary">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+
+{% endblock %}

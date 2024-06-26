@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+Contacto
+{% endblock %}
+
+{% block content %}
+<body>
+    <div class="container-fluid vh-100 d-flex justify-content-center align-items-center">
+        <div class="row bg-dark w-100 p-5">
+            <div>
+                <h2 class="text-white">Formulario de contacto</h2>
+                <form>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label text-white">Correo</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingrese su correo electrónico" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label text-white">Nombre</label>
+                        <input type="text" class="form-control" id="input-nombre" placeholder="Ingrese su nombre completo" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label text-white">Mensaje</label>
+                        <textarea class="form-control" placeholder="Ingrese su mensaje aquí" id="floatingTextarea2" style="height: 100px" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-secondary">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock %}

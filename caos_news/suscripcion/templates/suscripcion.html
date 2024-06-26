@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block title %}
+Suscripción
+{% endblock %}
+
+
+{% block content %}
+<body class="body-suscripcion">
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Plan Mensual</h5>
+                        <p class="card-text">Suscripción mensual a Caos News por $9.99 al mes.</p>
+                        <div class="mt-auto">
+                            <button type="button" class="btn btn-secondary btn-block" data-bs-toggle="modal" data-bs-target="#mensualModal">Suscribirse</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <h5 class="card-title">Plan Anual</h5>
+                        <p class="card-text">Suscripción anual a Caos News por $99.99 al año.</p>
+                        <div class="mt-auto">
+                            <button type="button" class="btn btn-secondary btn-block"  data-bs-toggle="modal" data-bs-target="#anualModal">Suscribirse</button>
+                        </div>                    
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <h5 class="card-title">Membresía de Por Vida</h5>
+                        <p class="card-text">Una sola vez, acceso de por vida a Caos News por $499.99.</p>
+                    </div>
+                    <div class="mt-auto">
+                        <button type="button" class="btn btn-secondary btn-block" data-bs-toggle="modal" data-bs-target="#vidaModal">Suscribirse</button>
+                    </div>         
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+{% endblock %}
